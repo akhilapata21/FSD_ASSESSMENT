@@ -1,0 +1,172 @@
+/* App Layout Styles */
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 10px 0;
+  letter-spacing: -0.02em;
+}
+
+.app-subtitle {
+  font-size: 1.05rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.app-subtitle code {
+  color: #4f46e5;
+  background: #ede9fe;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Students Grid */
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* Student Profile Card */
+.student-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -3px rgba(99, 102, 241, 0.15), 0 4px 6px -4px rgba(99, 102, 241, 0.1);
+  border-color: #cbd5e1;
+}
+
+.student-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4f46e5, #06b6d4);
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+/* Avatar */
+.student-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+}
+
+/* Details */
+.student-details {
+  flex: 1;
+  text-align: left;
+}
+
+.student-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+}
+
+.student-info {
+  font-size: 0.95rem;
+  color: #475569;
+  margin: 6px 0;
+  line-height: 1.5;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.student-info .label {
+  font-weight: 600;
+  color: #1e293b;
+  min-width: 65px;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.app-footer code {
+  color: #6366f1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .app-title {
+    font-size: 1.85rem;
+  }
+  
+  .student-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .student-details {
+    text-align: center;
+  }
+
+  .student-info {
+    justify-content: center;
+  }
+}
